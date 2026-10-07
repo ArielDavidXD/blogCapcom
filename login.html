@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="description" content="Inicia sesión en el sitio web académico sobre CAPCOM.">
+    <meta name="keywords" content="CAPCOM, inicio de sesión, login">
+    <meta name="author" content="Ariel David">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Iniciar Sesión: CAPCOM</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Encabezado -->
+    <header class="main-header">
+
+        <a href="index.html" class="logo">
+            <img src="Capcom_logo.svg" alt="Logo de CAPCOM" width="80">
+        </a>
+
+        <!-- Navegación -->
+        <nav class="main-nav" aria-label="Navegación principal">
+            <ul class="nav-list">
+                <li>
+                    <a href="index.html" class="nav-link">Inicio</a>
+                </li>
+
+                <li>
+                    <a href="nosotros.html" class="nav-link">Sobre Nosotros</a>
+                </li>
+
+                <li>
+                    <a href="lanzamientos.html" class="nav-link">Lanzamientos</a>
+                </li>
+
+                <li>
+                    <a href="contacto.html" class="nav-link">Contacto</a>
+                </li>
+
+                <li>
+                    <a href="login.html" class="nav-link active">Iniciar Sesión</a>
+                </li>
+            </ul>
+        </nav>
+
+        <button class="theme-toggle" aria-label="Cambiar tema">
+            🌙 / ☀️
+        </button>
+
+    </header>
+
+    <main>
+
+        <!-- TÍTULO DE LA PÁGINA -->
+        <section class="sobre-hero">
+            <h1>Iniciar Sesión</h1>
+            <p>Accede para guardar tus juegos favoritos y recibir novedades de CAPCOM.</p>
+        </section>
+
+        <!-- FORMULARIO DE LOGIN -->
+        <section class="login-seccion">
+
+            <form class="login-tarjeta" id="form-login">
+
+                <div class="campo">
+                    <label for="correo">Correo electrónico</label>
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        placeholder="ejemplo@correo.com"
+                        required
+                        autocomplete="email">
+                </div>
+
+                <div class="campo">
+                    <label for="contrasena">Contraseña</label>
+                    <input
+                        type="password"
+                        id="contrasena"
+                        name="contrasena"
+                        placeholder="Mínimo 6 caracteres"
+                        minlength="6"
+                        required
+                        autocomplete="current-password">
+                </div>
+
+                <div class="campo campo-check">
+                    <input type="checkbox" id="recordar" name="recordar">
+                    <label for="recordar">Recordarme en este dispositivo</label>
+                </div>
+
+                <button type="button" class="boton-principal boton-login">
+                    Entrar
+                </button>
+
+                <p class="login-extra">
+                    ¿No tenés cuenta? <a href="#">Creá una gratis</a>
+                </p>
+
+            </form>
+
+            <!-- Información lateral -->
+            <aside class="login-info">
+                <h2>¿Por qué crear una cuenta?</h2>
+
+                <ul class="lista-beneficios">
+                    <li>Guardá tu lista de juegos favoritos de CAPCOM.</li>
+                    <li>Recibí avisos de los lanzamientos de 2026.</li>
+                    <li>Participá en encuestas y comentarios del sitio.</li>
+                </ul>
+
+                <p class="nota-demo">
+                    Sitio web académico: el formulario no envía datos a ningún servidor.
+                </p>
+            </aside>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <p>© 2026 CAPCOM: más de 40 años haciendo historia.</p>
+        <p>Sitio web académico realizado para Programación Web.</p>
+        <a href="mailto:arieldavidmarin739@gmail.com">Contacto</a>
+    </footer>
+
+</body>
+
+</html>

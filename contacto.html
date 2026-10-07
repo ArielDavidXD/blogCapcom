@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="description"
+        content="Contacto del sitio web académico sobre CAPCOM: formulario de consultas y ubicación del sitio.">
+    <meta name="keywords" content="CAPCOM, contacto, formulario, consultas">
+    <meta name="author" content="Ariel David">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacto: CAPCOM</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Encabezado -->
+    <header class="main-header">
+
+        <a href="index.html" class="logo">
+            <img src="Capcom_logo.svg" alt="Logo de CAPCOM" width="80">
+        </a>
+
+        <!-- Navegación -->
+        <nav class="main-nav" aria-label="Navegación principal">
+            <ul class="nav-list">
+                <li>
+                    <a href="index.html" class="nav-link">Inicio</a>
+                </li>
+
+                <li>
+                    <a href="nosotros.html" class="nav-link">Sobre Nosotros</a>
+                </li>
+
+                <li>
+                    <a href="lanzamientos.html" class="nav-link">Lanzamientos</a>
+                </li>
+
+                <li>
+                    <a href="contacto.html" class="nav-link active">Contacto</a>
+                </li>
+
+                <li>
+                    <a href="login.html" class="nav-link">Iniciar Sesión</a>
+                </li>
+            </ul>
+        </nav>
+
+        <button class="theme-toggle" aria-label="Cambiar tema">
+            🌙 / ☀️
+        </button>
+
+    </header>
+
+    <main>
+
+        <!-- TÍTULO DE LA PÁGINA -->
+        <section class="sobre-hero">
+            <h1>Contacto</h1>
+            <p>Completá el formulario y te responderemos lo antes posible.</p>
+        </section>
+
+        <!-- FORMULARIO + UBICACIÓN (CSS GRID + MODELO DE CAJA) -->
+        <section class="contacto-seccion">
+
+            <!-- Formulario con validación nativa de HTML5 (sin JavaScript) -->
+            <form class="contacto-form" action="" method="get">
+
+                <div class="campos">
+
+                    <!-- Campo 1: tipo texto -->
+                    <div class="campo">
+                        <label for="nombre">Nombre y apellido</label>
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            placeholder="Ej: María López"
+                            required
+                            minlength="3"
+                            autocomplete="name">
+                    </div>
+
+                    <!-- Campo 2: tipo email -->
+                    <div class="campo">
+                        <label for="correo">Correo electrónico</label>
+                        <input
+                            type="email"
+                            id="correo"
+                            name="correo"
+                            placeholder="ejemplo@correo.com"
+                            required
+                            autocomplete="email">
+                    </div>
+
+                    <!-- Campo 3: tipo select -->
+                    <div class="campo campo-completo">
+                        <label for="asunto">Asunto de la consulta</label>
+                        <select id="asunto" name="asunto" required>
+                            <option value="" selected disabled>Seleccioná una opción...</option>
+                            <option value="lanzamientos">Consultas sobre lanzamientos 2026</option>
+                            <option value="historia">Consultas sobre la historia de CAPCOM</option>
+                            <option value="sugerencia">Sugerencias para el sitio</option>
+                            <option value="otro">Otro tema</option>
+                        </select>
+                    </div>
+
+                    <!-- Campo 4: tipo textarea -->
+                    <div class="campo campo-completo">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea
+                            id="mensaje"
+                            name="mensaje"
+                            placeholder="Escribí acá tu consulta..."
+                            required
+                            minlength="10"
+                            rows="6"></textarea>
+                    </div>
+
+                    <!-- Campo 5: tipo checkbox -->
+                    <div class="campo campo-completo campo-check">
+                        <input type="checkbox" id="acepto" name="acepto" required>
+                        <label for="acepto">
+                            Acepto que mis datos se utilicen únicamente con fines académicos.
+                        </label>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="boton-principal boton-ancho">
+                    Enviar mensaje
+                </button>
+
+            </form>
+
+            <!-- Dirección / ubicación del sitio como TEXTO -->
+            <aside class="contacto-datos">
+
+                <h2>Ubicación del sitio</h2>
+
+                <address>
+                    <p><strong>CAPCOM: más de 40 años haciendo historia</strong></p>
+                    <p>Sitio web académico de la asignatura Programación Web</p>
+                    <p>Año lectivo 2026</p>
+                    <p>🔑 Reemplazá esta línea con tu dirección o ciudad</p>
+                    <p>
+                        Correo:
+                        <a href="mailto:arieldavidmarin739@gmail.com">
+                            arieldavidmarin739@gmail.com
+                        </a>
+                    </p>
+                </address>
+
+                <p class="nota-demo">
+                    Este sitio es una actividad académica: el formulario no envía datos a ningún servidor.
+                </p>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <p>© 2026 CAPCOM: más de 40 años haciendo historia.</p>
+        <p>Sitio web académico realizado para Programación Web.</p>
+        <a href="mailto:arieldavidmarin739@gmail.com">Contacto</a>
+    </footer>
+
+</body>
+
+</html>
