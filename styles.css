@@ -1,6 +1,31 @@
 
 /* =========================================================
-   1. RESET Y CONFIGURACIÓN GENERAL
+   1. VARIABLES Y CONFIGURACIÓN GENERAL
+   ========================================================= */
+
+:root {
+    --fondo: #111111;
+    --fondo-secundario: #181818;
+    --fondo-oscuro: #0b0b0b;
+    --fondo-header: #050505;
+
+    --texto: #ffffff;
+    --texto-secundario: #cccccc;
+    --texto-suave: #aaaaaa;
+
+    --borde: #303030;
+    --borde-input: #444444;
+
+    --rojo: #e60012;
+    --rojo-claro: #ff404f;
+    --rojo-hover: #ff2638;
+
+    --sombra-roja: rgba(230, 0, 18, 0.3);
+}
+
+
+/* =========================================================
+   RESET
    ========================================================= */
 
 * {
@@ -15,8 +40,8 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #111111;
-    color: #ffffff;
+    background-color: var(--fondo);
+    color: var(--texto);
     line-height: 1.6;
 }
 
@@ -25,19 +50,14 @@ body {
    2. HEADER Y NAVEGACIÓN
    ========================================================= */
 
-.main-header {
+.encabezado {
     min-height: 90px;
     padding: 10px 6%;
-
     display: flex;
     align-items: center;
-
-    background-color: #050505;
-    border-bottom: 1px solid #303030;
+    background-color: var(--fondo-header);
+    border-bottom: 1px solid var(--borde);
 }
-
-
-/* Logo */
 
 .logo {
     display: block;
@@ -49,60 +69,47 @@ body {
     height: 50px;
 }
 
-
-/* Navegación */
-
-.main-nav {
+.navegacion {
     margin-left: auto;
 }
 
-.nav-list {
+.navegacion-lista {
     display: flex;
     align-items: center;
     gap: 30px;
-
     list-style: none;
 }
 
-.nav-link {
-    color: #ffffff;
+.navegacion-enlace {
+    color: var(--texto);
     text-decoration: none;
-
     font-size: 15px;
     font-weight: bold;
-
     transition: color 0.3s ease;
 }
 
-.nav-link:hover,
-.nav-link.active {
-    color: #ff404f;
+.navegacion-enlace:hover,
+.navegacion-enlace--activo {
+    color: var(--rojo-claro);
 }
 
 
 /* Botón del tema */
 
-.theme-toggle {
+.boton-tema {
     margin-left: 30px;
-
     padding: 8px 12px;
-
     border: 1px solid #555555;
     border-radius: 6px;
-
     background-color: transparent;
-    color: #ffffff;
-
+    color: var(--texto);
     cursor: pointer;
-
-    transition:
-        background-color 0.3s ease,
-        border-color 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-.theme-toggle:hover {
-    background-color: #222222;
-    border-color: #e60012;
+.boton-tema:hover {
+    background-color: var(--fondo-secundario);
+    border-color: var(--rojo);
 }
 
 
@@ -110,14 +117,9 @@ body {
    3. INICIO
    ========================================================= */
 
-
-/* Sección principal */
-
-.presentacion {
+.portada-inicio {
     min-height: 500px;
-
     padding: 100px 10%;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -132,88 +134,69 @@ body {
     animation: aparecer 1s ease;
 }
 
-.presentacion h1 {
+.portada-inicio h1 {
     max-width: 900px;
-
     margin-bottom: 25px;
-
     font-size: clamp(42px, 6vw, 76px);
     line-height: 1.05;
 }
 
-.presentacion p {
+.portada-inicio p {
     max-width: 650px;
-
     margin-bottom: 35px;
-
     color: #dddddd;
-
     font-size: 20px;
 }
 
 
-/* Botón principal */
+/* Botones principales */
 
 .boton-principal {
     display: inline-block;
-
     padding: 13px 25px;
-
     border-radius: 4px;
-
-    background-color: #e60012;
+    background-color: var(--rojo);
     color: #ffffff;
-
     text-decoration: none;
     font-weight: bold;
-
-    transition:
-        background-color 0.3s ease,
-        transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .boton-principal:hover {
-    background-color: #ff2638;
-
+    background-color: var(--rojo-hover);
     transform: translateY(-3px);
 }
 
 
-/* Resumen de historia */
+/* Resumen */
 
 .resumen-historia {
     padding: 80px 10%;
-
-    background-color: #181818;
+    background-color: var(--fondo-secundario);
 }
 
 .resumen-historia article {
     max-width: 900px;
-
     margin: 0 auto;
 }
 
 .resumen-historia h2 {
     margin-bottom: 25px;
-
     font-size: 36px;
 }
 
 .resumen-historia p {
     margin-bottom: 18px;
-
-    color: #dddddd;
+    color: var(--texto-secundario);
 }
 
 
-/* Frase destacada */
+/* Frase */
 
 .frase-destacada {
     padding: 70px 10%;
-
     text-align: center;
-
-    background-color: #e60012;
+    background-color: var(--rojo);
 }
 
 .frase-destacada p {
@@ -226,115 +209,89 @@ body {
    4. SOBRE CAPCOM
    ========================================================= */
 
-
-/* Encabezado */
-
-.sobre-hero {
+.portada-pagina {
     padding: 90px 10% 60px;
-
     text-align: center;
 }
 
-.sobre-hero h1 {
+.portada-pagina h1 {
     margin-bottom: 15px;
-
     font-size: clamp(42px, 6vw, 70px);
     line-height: 1.1;
 }
 
-.sobre-hero p {
-    color: #cccccc;
-
+.portada-pagina p {
+    color: var(--texto-secundario);
     font-size: 20px;
 }
 
 
 /* =========================================================
-   HISTORIA — CSS GRID
+   HISTORIA
    ========================================================= */
 
-.historia-capcom {
+.tarjetas-historia {
     max-width: 1200px;
-
     margin: 0 auto;
     padding: 40px 30px 90px;
-
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
     gap: 25px;
 }
 
-
-/* Tarjetas */
-
-.historia-capcom article {
-    padding: 35px;
-
-    background-color: #181818;
-
-    border: 1px solid #303030;
+.tarjetas-historia article,
+.tarjeta-juego,
+.login-formulario,
+.contacto-formulario {
+    background-color: var(--fondo-secundario);
+    border: 1px solid var(--borde);
     border-radius: 8px;
-
-    transition:
-        transform 0.3s ease,
-        border-color 0.3s ease;
 }
 
-.historia-capcom article:hover {
-    transform: translateY(-4px);
+.tarjetas-historia article {
+    padding: 35px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
 
-    border-color: #e60012;
+.tarjetas-historia article:hover,
+.tarjeta-juego:hover {
+    transform: translateY(-5px);
+    border-color: var(--rojo);
 }
 
 
 /* Imagen */
 
-.historia-imagen {
+.tarjeta-imagen {
     padding: 0 !important;
-
     overflow: hidden;
 }
 
-.historia-imagen img {
+.tarjeta-imagen img {
     display: block;
-
     width: 100%;
     height: 100%;
     min-height: 350px;
-
     object-fit: cover;
 }
 
 
-/* Contenido */
+/* Texto */
 
-.historia-contenido h2,
-.franquicias h2,
-.expansion h2 {
+.tarjetas-historia h2 {
     margin-bottom: 15px;
-
     font-size: 30px;
 }
 
-.historia-contenido p,
-.expansion p {
+.tarjeta-texto p {
     margin-top: 15px;
-
-    color: #cccccc;
+    color: var(--texto-secundario);
 }
-
-
-/* Periodos */
 
 .periodo {
     display: inline-block;
-
     margin-bottom: 10px;
-
-    color: #ff404f;
-
+    color: var(--rojo-claro);
     font-weight: bold;
 }
 
@@ -343,26 +300,22 @@ body {
    FRANQUICIAS
    ========================================================= */
 
-.franquicias ul {
+.tarjeta-lista ul {
     margin-top: 20px;
-
     list-style: none;
 }
 
-.franquicias li {
+.tarjeta-lista li {
     padding: 10px 0;
-
-    border-bottom: 1px solid #333333;
-
-    color: #dddddd;
+    border-bottom: 1px solid var(--borde);
+    color: var(--texto-secundario);
 }
 
-.franquicias li::before {
+.tarjeta-lista li::before,
+.lista-beneficios li::before {
     content: "▸";
-
     margin-right: 10px;
-
-    color: #e60012;
+    color: var(--rojo);
 }
 
 
@@ -372,178 +325,106 @@ body {
 
 .hitos {
     padding: 80px 8%;
-
-    background-color: #0b0b0b;
-
+    background-color: var(--fondo-oscuro);
     text-align: center;
 }
 
 .hitos h2 {
     margin-bottom: 70px;
-
     font-size: 38px;
 }
 
-
-/* Contenedor de los hitos */
-
 .linea-tiempo {
     position: relative;
-
     max-width: 1100px;
-
     margin: 0 auto;
-
     display: grid;
-
     grid-template-columns: repeat(5, 1fr);
-
     gap: 20px;
 }
 
-
-/* Línea horizontal */
-
 .linea-tiempo::before {
     content: "";
-
     position: absolute;
-
     top: 8px;
     left: 5%;
     right: 5%;
-
     height: 3px;
-
-    background-color: #e60012;
+    background-color: var(--rojo);
 }
-
-
-/* Hito */
 
 .hito {
     position: relative;
-
     z-index: 1;
 }
 
-
-/* Punto */
-
 .hito-punto {
     display: block;
-
     width: 18px;
     height: 18px;
-
     margin: 0 auto 20px;
-
     border-radius: 50%;
-
-    background-color: #e60012;
-
-    border: 4px solid #0b0b0b;
-
-    box-shadow: 0 0 0 2px #e60012;
+    background-color: var(--rojo);
+    border: 4px solid var(--fondo-oscuro);
+    box-shadow: 0 0 0 2px var(--rojo);
 }
-
-
-/* Año */
 
 .hito strong {
     display: block;
-
     margin-bottom: 10px;
-
     font-size: 24px;
 }
 
 .hito p {
-    color: #aaaaaa;
-
+    color: var(--texto-suave);
     font-size: 14px;
 }
 
 
 /* =========================================================
-   6. LANZAMIENTOS — CSS GRID
+   6. LANZAMIENTOS
    ========================================================= */
 
-.juegos-grid {
+.tarjetas-juegos {
     max-width: 1200px;
-
     margin: 0 auto;
     padding: 40px 30px 90px;
-
     display: grid;
-
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-
     gap: 25px;
 }
 
-
-/* Tarjeta de juego */
-
-.juego-card {
+.tarjeta-juego {
     padding: 35px;
-
-    background-color: #181818;
-
-    border: 1px solid #303030;
-    border-radius: 8px;
-
-    transition:
-        transform 0.3s ease,
-        border-color 0.3s ease;
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.juego-card:hover {
-    transform: translateY(-6px);
-
-    border-color: #e60012;
-}
-
-
-/* Fecha de lanzamiento */
-
-.juego-fecha {
+.tarjeta-fecha {
     display: inline-block;
-
     margin-bottom: 15px;
-
     padding: 6px 14px;
-
     border-radius: 30px;
-
-    background-color: #e60012;
+    background-color: var(--rojo);
     color: #ffffff;
-
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-.juego-card h2 {
+.tarjeta-juego h2 {
     margin-bottom: 15px;
-
     font-size: 26px;
 }
 
-.juego-card p {
+.tarjeta-juego p {
     margin-bottom: 15px;
-
-    color: #cccccc;
+    color: var(--texto-secundario);
     font-size: 15px;
 }
 
-
-/* Plataformas */
-
 .plataformas {
-    color: #aaaaaa !important;
-
+    color: var(--texto-suave) !important;
     font-size: 13px !important;
     font-weight: bold;
     text-transform: uppercase;
@@ -552,171 +433,129 @@ body {
 
 
 /* =========================================================
-   VIDEO DE YOUTUBE
+   VIDEO
    ========================================================= */
 
-
-
-.video-seccion {
+.tarjeta-video {
     padding: 80px 10% 100px;
-
-    background-color: #0b0b0b;
-
+    background-color: var(--fondo-oscuro);
     text-align: center;
 }
 
-.video-seccion h2 {
+.tarjeta-video h2 {
     margin-bottom: 15px;
-
     font-size: 36px;
 }
 
 .video-descripcion {
     max-width: 700px;
-
     margin: 0 auto 40px;
-
-    color: #cccccc;
+    color: var(--texto-secundario);
 }
 
-.trailers {
+.tarjetas-video {
     max-width: 1200px;
-
     margin: 0 auto;
     padding: 40px 30px 90px;
-
     display: grid;
-
     grid-template-columns: 2fr 2fr;
-
     gap: 25px;
 }
 
-
-
-/* Contenedor responsivo del video (relación 16:9) */
-
 .video-contenedor {
     position: relative;
-
     max-width: 900px;
-
     margin: 0 auto;
-
     padding-bottom: 56.25%;
-
     overflow: hidden;
-
-    border: 1px solid #303030;
+    border: 1px solid var(--borde);
     border-radius: 8px;
-
     background-color: #000000;
 }
 
 .video-contenedor iframe {
     position: absolute;
-
-    top: 0;
-    left: 0;
-
+    inset: 0;
     width: 100%;
     height: 100%;
-
     border: 0;
 }
 
 
 /* =========================================================
-   7. INICIAR SESIÓN
+   7. LOGIN
    ========================================================= */
 
 .login-seccion {
     max-width: 1100px;
-
     margin: 0 auto;
     padding: 40px 30px 90px;
-
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
     gap: 30px;
-
     align-items: start;
 }
 
-
-/* Tarjeta del formulario */
-
-.login-tarjeta {
+.login-formulario,
+.login-datos {
     padding: 40px;
-
-    background-color: #181818;
-
-    border: 1px solid #303030;
-    border-radius: 8px;
 }
-
-
-/* Campos */
 
 .campo {
     margin-bottom: 22px;
-
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
 .campo label {
-    color: #ffffff;
-
+    color: var(--texto);
     font-size: 15px;
     font-weight: bold;
 }
 
 .campo input[type="email"],
-.campo input[type="password"] {
+.campo input[type="password"],
+.campo input[type="text"],
+.campo select,
+.campo textarea {
+    width: 100%;
     padding: 13px 15px;
-
-    border: 1px solid #444444;
+    border: 1px solid var(--borde-input);
     border-radius: 6px;
-
-    background-color: #0b0b0b;
-    color: #ffffff;
-
+    background-color: var(--fondo-oscuro);
+    color: var(--texto);
     font-family: inherit;
     font-size: 16px;
-
-    transition:
-        border-color 0.3s ease,
-        box-shadow 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.campo input:focus {
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
     outline: none;
+    border-color: var(--rojo);
+    box-shadow: 0 0 0 3px var(--sombra-roja);
+}
 
-    border-color: #e60012;
-
-    box-shadow: 0 0 0 3px rgba(230, 0, 18, 0.3);
+.campo textarea {
+    min-height: 150px;
+    resize: vertical;
 }
 
 
-/* Casilla de recordarme */
+/* Checkbox */
 
 .campo-check {
     flex-direction: row;
-
     align-items: center;
-
     gap: 10px;
 }
 
 .campo-check input[type="checkbox"] {
     width: 18px;
     height: 18px;
-
-    accent-color: #e60012;
+    accent-color: var(--rojo);
 }
 
 .campo-check label {
@@ -724,57 +563,57 @@ body {
 }
 
 
-/* Botón de acceso */
+/* Botones */
 
 .boton-login {
     width: 100%;
-
     border: none;
-
     cursor: pointer;
+    font-family: inherit;
+}
 
+.boton-ancho {
+    width: 100%;
+    margin-top: 25px;
+    border: none;
+    cursor: pointer;
     font-family: inherit;
 }
 
 
-/* Enlace extra */
+/* Registro */
 
-.login-extra {
+.login-registro {
     margin-top: 20px;
-
-    color: #aaaaaa;
-
+    color: var(--texto-suave);
     text-align: center;
     font-size: 15px;
 }
 
-.login-extra a {
-    color: #ff404f;
-
+.login-registro a,
+.contacto-datos address a {
+    color: var(--rojo-claro);
     font-weight: bold;
-
     transition: color 0.3s ease;
 }
 
-.login-extra a:hover {
+.login-registro a:hover,
+.contacto-datos address a:hover {
     color: #ff8088;
 }
 
 
 /* Información lateral */
 
-.login-info {
-    padding: 40px;
-
-    background-color: #0b0b0b;
-
-    border: 1px solid #303030;
+.login-datos,
+.contacto-datos {
+    background-color: var(--fondo-oscuro);
+    border: 1px solid var(--borde);
     border-radius: 8px;
 }
 
-.login-info h2 {
+.login-datos h2 {
     margin-bottom: 25px;
-
     font-size: 28px;
 }
 
@@ -784,207 +623,64 @@ body {
 
 .lista-beneficios li {
     padding: 12px 0;
-
-    border-bottom: 1px solid #303030;
-
-    color: #dddddd;
-}
-
-.lista-beneficios li::before {
-    content: "▸";
-
-    margin-right: 10px;
-
-    color: #e60012;
+    border-bottom: 1px solid var(--borde);
+    color: var(--texto-secundario);
 }
 
 .nota-demo {
     margin-top: 25px;
-
     color: #888888;
-
     font-size: 13px;
     font-style: italic;
 }
 
 
 /* =========================================================
-   8. CONTACTO — MODELO DE CAJA
+   8. CONTACTO
    ========================================================= */
 
-/* Contenedor: margen exterior centrado + padding interior */
 .contacto-seccion {
     max-width: 1100px;
-
-    margin: 0 auto;              /* margen exterior: centra la caja */
-    padding: 40px 30px 90px;     /* padding interior: separa del borde de la ventana */
-
+    margin: 0 auto;
+    padding: 40px 30px 90px;
     display: grid;
-
     grid-template-columns: 2fr 1fr;
-
     gap: 30px;
-
     align-items: start;
 }
 
-
-/* Formulario: padding + borde + radio (modelo de caja completo) */
-.contacto-form {
-    padding: 40px;               /* contenido separado del borde */
-
-    background-color: #181818;
-
-    border: 1px solid #303030;   /* borde visible */
-    border-radius: 8px;
+.contacto-formulario {
+    padding: 40px;
 }
 
-
-/* Rejilla de campos: 2 columnas, se completa sola */
 .campos {
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
-    gap: 22px;                   /* espacio entre campos */
+    gap: 22px;
 }
 
 .campo-completo {
-    grid-column: 1 / -1;         /* ocupa las 2 columnas */
+    grid-column: 1 / -1;
 }
 
-
-/* Cada campo: label arriba, control abajo */
-.campo {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.campo label {
-    color: #ffffff;
-
-    font-size: 15px;
-    font-weight: bold;
-}
-
-
-/* Controles: padding interior + borde + margen inferior */
-.campo input[type="text"],
-.campo input[type="email"],
-.campo select,
-.campo textarea {
-    width: 100%;                 /* ocupa todo el ancho de su columna */
-
-    padding: 13px 15px;          /* padding interior: respiración del texto */
-
-    border: 1px solid #444444;   /* borde de la caja */
-    border-radius: 6px;
-
-    background-color: #0b0b0b;
-    color: #ffffff;
-
-    font-family: inherit;
-    font-size: 16px;
-
-    transition:
-        border-color 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-.campo input:focus,
-.campo select:focus,
-.campo textarea:focus {
-    outline: none;
-
-    border-color: #e60012;
-
-    box-shadow: 0 0 0 3px rgba(230, 0, 18, 0.3);
-}
-
-
-/* Textarea: altura mínima y reescalado */
-.campo textarea {
-    min-height: 150px;
-
-    resize: vertical;
-}
-
-
-/* Checkbox */
-.campo-check {
-    flex-direction: row;
-
-    align-items: center;
-
-    gap: 10px;
-}
-
-.campo-check input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-
-    accent-color: #e60012;
-}
-
-.campo-check label {
-    font-weight: normal;
-}
-
-
-/* Botón: margen superior + padding interior */
-.boton-ancho {
-    width: 100%;
-
-    margin-top: 25px;
-
-    border: none;
-
-    cursor: pointer;
-
-    font-family: inherit;
-}
-
-
-/* Panel de ubicación (dirección como TEXTO) */
 .contacto-datos {
     padding: 40px;
-
-    background-color: #0b0b0b;
-
-    border: 1px solid #303030;
-    border-left: 4px solid #e60012;  /* acento lateral */
-
-    border-radius: 8px;
+    border-left: 4px solid var(--rojo);
 }
 
 .contacto-datos h2 {
     margin-bottom: 25px;
-
     font-size: 26px;
 }
 
 .contacto-datos address {
-    font-style: normal;              /* dirección legible, sin cursiva */
+    font-style: normal;
 }
 
 .contacto-datos address p {
     margin-bottom: 14px;
-
-    color: #cccccc;
+    color: var(--texto-secundario);
     line-height: 1.5;
-}
-
-.contacto-datos address a {
-    color: #ff404f;
-
-    font-weight: bold;
-
-    transition: color 0.3s ease;
-}
-
-.contacto-datos address a:hover {
-    color: #ff8088;
 }
 
 
@@ -992,28 +688,24 @@ body {
    9. FOOTER
    ========================================================= */
 
-.main-footer {
+.pie-pagina {
     padding: 35px 10%;
-
-    background-color: #050505;
-
-    color: #aaaaaa;
-
+    background-color: var(--fondo-header);
+    color: var(--texto-suave);
     text-align: center;
 }
 
-.main-footer p {
+.pie-pagina p {
     margin-bottom: 8px;
 }
 
-.main-footer a {
-    color: #ffffff;
-
+.pie-pagina a {
+    color: var(--texto);
     transition: color 0.3s ease;
 }
 
-.main-footer a:hover {
-    color: #e60012;
+.pie-pagina a:hover {
+    color: var(--rojo);
 }
 
 
@@ -1022,19 +714,15 @@ body {
    ========================================================= */
 
 @keyframes aparecer {
-
     from {
         opacity: 0;
-
         transform: translateY(30px);
     }
 
     to {
         opacity: 1;
-
         transform: translateY(0);
     }
-
 }
 
 
@@ -1046,78 +734,60 @@ body {
 
     /* Header */
 
-    .main-header {
+    .encabezado {
         flex-direction: column;
-
         gap: 20px;
-
         padding: 20px;
     }
 
-
-    /* Navegación */
-
-    .main-nav {
+    .navegacion {
         margin-left: 0;
     }
 
-    .nav-list {
+    .navegacion-lista {
         flex-wrap: wrap;
-
         justify-content: center;
-
         gap: 15px;
     }
 
-
-    /* Tema */
-
-    .theme-toggle {
+    .boton-tema {
         margin-left: 0;
     }
 
 
     /* Inicio */
 
-    .presentacion {
+    .portada-inicio {
         min-height: 450px;
-
         padding: 70px 8%;
     }
 
-    .presentacion h1 {
+    .portada-inicio h1,
+    .portada-pagina h1 {
         font-size: 45px;
     }
 
-    .presentacion p {
+    .portada-inicio p,
+    .portada-pagina p {
         font-size: 17px;
     }
 
 
-    /* Sobre CAPCOM */
+    /* Sobre Capcom */
 
-    .sobre-hero {
+    .portada-pagina {
         padding: 60px 8% 40px;
     }
 
-    .sobre-hero h1 {
-        font-size: 45px;
-    }
 
-    .sobre-hero p {
-        font-size: 17px;
-    }
+    /* Historia */
 
-
-    /* Grid */
-
-    .historia-capcom {
+    .tarjetas-historia {
         grid-template-columns: 1fr;
-
         padding: 30px 20px 60px;
     }
 
-    .historia-imagen img {
+    .tarjeta-imagen img {
         min-height: 250px;
     }
 
@@ -1134,81 +804,66 @@ body {
 
     .linea-tiempo {
         grid-template-columns: 1fr;
-
         gap: 40px;
     }
-
-
-    /* Línea vertical en móvil */
 
     .linea-tiempo::before {
         top: 0;
         bottom: 0;
         left: 50%;
-
         width: 3px;
         height: auto;
-
         right: auto;
     }
 
-
     .hito {
         padding: 20px;
-
         border-radius: 8px;
-
-        background-color: #181818;
+        background-color: var(--fondo-secundario);
     }
 
 
     /* Lanzamientos */
 
-    .juegos-grid {
+    .tarjetas-juegos {
         grid-template-columns: 1fr;
-
         padding: 30px 20px 60px;
     }
 
 
-    /* Trailers: de 2 columnas a 1 en pantallas chicas */
+    /* Videos */
 
-    .trailers {
+    .tarjetas-video {
         grid-template-columns: 1fr;
     }
 
-    .video-seccion {
+    .tarjeta-video {
         padding: 60px 5% 70px;
     }
 
-    .video-seccion h2 {
+    .tarjeta-video h2 {
         font-size: 28px;
     }
 
 
-    /* Iniciar sesión */
+    /* Login */
 
     .login-seccion {
         grid-template-columns: 1fr;
-
         padding: 30px 20px 60px;
     }
 
-    .login-tarjeta,
-    .login-info {
-        padding: 25px;
-    }
 
-
-    /* Contacto: formulario y datos apilados en 1 columna */
+    /* Contacto */
 
     .contacto-seccion {
         grid-template-columns: 1fr;
-
         padding: 30px 20px 60px;
     }
 
-    .contacto-form,
+    .login-formulario,
+    .login-datos,
+    .contacto-formulario,
     .contacto-datos {
         padding: 25px;
     }
@@ -1216,5 +871,4 @@ body {
     .campos {
         grid-template-columns: 1fr;
     }
-
 }

@@ -17,47 +17,44 @@
 <body>
 
     <!-- Encabezado -->
-    <header class="main-header">
+    <header class="encabezado">
 
         <a href="index.html" class="logo">
             <img src="Capcom_logo.svg" alt="Logo de CAPCOM" width="80">
         </a>
 
         <!-- Navegación -->
-        <nav class="main-nav" aria-label="Navegación principal">
-            <ul class="nav-list">
+        <nav class="navegacion" aria-label="Navegación principal">
+            <ul class="navegacion-lista">
                 <li>
-                    <a href="index.html" class="nav-link">Inicio</a>
+                    <a href="index.html" class="navegacion-enlace">Inicio</a>
                 </li>
 
                 <li>
-                    <a href="nosotros.html" class="nav-link">Sobre Nosotros</a>
+                    <a href="nosotros.html" class="navegacion-enlace">Sobre Nosotros</a>
                 </li>
 
                 <li>
-                    <a href="lanzamientos.html" class="nav-link">Lanzamientos</a>
+                    <a href="lanzamientos.html" class="navegacion-enlace">Lanzamientos</a>
                 </li>
 
                 <li>
-                    <a href="contacto.html" class="nav-link">Contacto</a>
+                    <a href="contacto.html" class="navegacion-enlace">Contacto</a>
                 </li>
 
                 <li>
-                    <a href="login.html" class="nav-link active">Iniciar Sesión</a>
+                    <a href="login.html" class="navegacion-enlace navegacion-enlace--activo">Iniciar Sesión</a>
                 </li>
             </ul>
         </nav>
 
-        <button class="theme-toggle" aria-label="Cambiar tema">
-            🌙 / ☀️
-        </button>
 
     </header>
 
     <main>
 
         <!-- TÍTULO DE LA PÁGINA -->
-        <section class="sobre-hero">
+        <section class="portada-pagina">
             <h1>Iniciar Sesión</h1>
             <p>Accede para guardar tus juegos favoritos y recibir novedades de CAPCOM.</p>
         </section>
@@ -65,13 +62,13 @@
         <!-- FORMULARIO DE LOGIN -->
         <section class="login-seccion">
 
-            <form class="login-tarjeta" id="form-login">
+            <form class="login-formulario" id="formulario-login">
 
                 <div class="campo">
-                    <label for="correo">Correo electrónico</label>
+                    <label for="login-correo">Correo electrónico</label>
                     <input
                         type="email"
-                        id="correo"
+                        id="login-correo"
                         name="correo"
                         placeholder="ejemplo@correo.com"
                         required
@@ -79,10 +76,10 @@
                 </div>
 
                 <div class="campo">
-                    <label for="contrasena">Contraseña</label>
+                    <label for="login-contrasena">Contraseña</label>
                     <input
                         type="password"
-                        id="contrasena"
+                        id="login-contrasena"
                         name="contrasena"
                         placeholder="Mínimo 6 caracteres"
                         minlength="6"
@@ -91,28 +88,28 @@
                 </div>
 
                 <div class="campo campo-check">
-                    <input type="checkbox" id="recordar" name="recordar">
-                    <label for="recordar">Recordarme en este dispositivo</label>
+                    <input type="checkbox" id="login-recordar" name="recordar">
+                    <label for="login-recordar">Recordarme en este dispositivo</label>
                 </div>
 
                 <button type="button" class="boton-principal boton-login">
                     Entrar
                 </button>
 
-                <p class="login-extra">
-                    ¿No tenés cuenta? <a href="#">Creá una gratis</a>
+                <p class="login-registro">
+                    ¿No tenés cuenta? <a href="#">Crea una gratis</a>
                 </p>
 
             </form>
 
             <!-- Información lateral -->
-            <aside class="login-info">
+            <aside class="login-datos">
                 <h2>¿Por qué crear una cuenta?</h2>
 
                 <ul class="lista-beneficios">
-                    <li>Guardá tu lista de juegos favoritos de CAPCOM.</li>
-                    <li>Recibí avisos de los lanzamientos de 2026.</li>
-                    <li>Participá en encuestas y comentarios del sitio.</li>
+                    <li>Guarda tu lista de juegos favoritos de CAPCOM.</li>
+                    <li>Recibe avisos de los lanzamientos de 2026.</li>
+                    <li>Participa en encuestas y comentarios del sitio.</li>
                 </ul>
 
                 <p class="nota-demo">
@@ -125,7 +122,7 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="main-footer">
+    <footer class="pie-pagina">
         <p>© 2026 CAPCOM: más de 40 años haciendo historia.</p>
         <p>Sitio web académico realizado para Programación Web.</p>
         <a href="mailto:arieldavidmarin739@gmail.com">Contacto</a>

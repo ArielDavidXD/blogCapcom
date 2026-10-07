@@ -18,88 +18,85 @@
 <body>
 
     <!-- Encabezado -->
-    <header class="main-header">
+    <header class="encabezado">
 
         <a href="index.html" class="logo">
             <img src="Capcom_logo.svg" alt="Logo de CAPCOM" width="80">
         </a>
 
         <!-- Navegación -->
-        <nav class="main-nav" aria-label="Navegación principal">
-            <ul class="nav-list">
+        <nav class="navegacion" aria-label="Navegación principal">
+            <ul class="navegacion-lista">
                 <li>
-                    <a href="index.html" class="nav-link">Inicio</a>
+                    <a href="index.html" class="navegacion-enlace">Inicio</a>
                 </li>
 
                 <li>
-                    <a href="nosotros.html" class="nav-link">Sobre Nosotros</a>
+                    <a href="nosotros.html" class="navegacion-enlace">Sobre Nosotros</a>
                 </li>
 
                 <li>
-                    <a href="lanzamientos.html" class="nav-link active">Lanzamientos</a>
+                    <a href="lanzamientos.html" class="navegacion-enlace navegacion-enlace--activo">Lanzamientos</a>
                 </li>
 
                 <li>
-                    <a href="contacto.html" class="nav-link">Contacto</a>
+                    <a href="contacto.html" class="navegacion-enlace">Contacto</a>
                 </li>
 
                 <li>
-                    <a href="login.html" class="nav-link">Iniciar Sesión</a>
+                    <a href="login.html" class="navegacion-enlace">Iniciar Sesión</a>
                 </li>
             </ul>
         </nav>
 
-        <button class="theme-toggle" aria-label="Cambiar tema">
-            🌙 / ☀️
-        </button>
 
     </header>
 
     <main>
 
         <!-- TÍTULO DE LA PÁGINA -->
-        <section class="sobre-hero">
+        <section class="portada-pagina">
             <h1>Lanzamientos 2026 y futuro cercano</h1>
             <p>Una de las apuestas más fuertes de CAPCOM: terror, ciencia ficción y acción en un mismo año.</p>
         </section>
 
         <!-- GRID DE JUEGOS (CSS GRID) -->
-        <section class="juegos-grid">
+        <section class="tarjetas-juegos">
 
-            <article class="juego-card">
-                <div class="juego-fecha">27 de febrero</div>
+            <article class="tarjeta-juego">
+                <div class="tarjeta-fecha">27 de febrero</div>
                 <h2>Resident Evil Requiem</h2>
                 <p>La novena entrega principal de la saga de survival horror. Regresa a Raccoon City con la analista
                     del FBI Grace Ashcroft, y ofrece la opción de jugar en primera o tercera persona.</p>
                 <p class="plataformas">PS5 · Xbox Series X|S · Switch 2 · PC</p>
             </article>
 
-            <article class="juego-card">
-                <div class="juego-fecha">13 de marzo</div>
+            <article class="tarjeta-juego">
+                <div class="tarjeta-fecha">13 de marzo</div>
                 <h2>Monster Hunter Stories 3</h2>
                 <p>Twisted Reflections continúa la saga de rol monstruista de CAPCOM, con historias, combates por
                     turnos y la posibilidad de criar y montar monstruos.</p>
                 <p class="plataformas">PS5 · Xbox Series X|S · Switch 2 · PC</p>
             </article>
 
-            <article class="juego-card">
-                <div class="juego-fecha">17 de abril</div>
+            <article class="tarjeta-juego">
+                <div class="tarjeta-fecha">17 de abril</div>
                 <h2>Pragmata</h2>
                 <p>Nueva propiedad intelectual de CAPCOM. Una aventura de acción y ciencia ficción en una estación
                     lunar, donde el hacking de la androide Diana es la clave para sobrevivir a los robots asesinos.</p>
                 <p class="plataformas">PS5 · Xbox Series X|S · Switch 2 · PC</p>
             </article>
 
-            <article class="juego-card">
-                <div class="juego-fecha">25 de septiembre</div>
+            <article class="tarjeta-juego">
+                <div class="tarjeta-fecha">25 de septiembre</div>
                 <h2>Onimusha: Way of the Sword</h2>
                 <p>La saga de acción ambientada en el Japón feudal regresa tras veinte años, con el samurái Miyamoto
                     Musashi como protagonista y el combate basado en el parry, todo con el motor RE Engine.</p>
                 <p class="plataformas">PS5 · Xbox Series X|S · PC</p>
             </article>
 
-            <article class="juego-card">
-                <div class="juego-fecha">2027</div>
+            <article class="tarjeta-juego">
+                <div class="tarjeta-fecha">2027</div>
                 <h2>Resident Evil Veronica</h2>
                 <p>La nueva forma de enfrentarse a la historia de Claire Redfield tras los eventos de Raccoon
                     City, reimaginada desde cero con el motor RE Engine. Programada para 2027, aún sin fecha
@@ -109,9 +106,9 @@
 
         </section>
 
-        <div class="trailers">
+        <div class="tarjetas-video">
             <!-- VIDEO DE YOUTUBE -->
-            <section class="video-seccion">
+            <section class="tarjeta-video">
 
                 <h2>Tráiler oficial de Resident Evil Requiem</h2>
 
@@ -130,7 +127,7 @@
 
             </section>
 
-            <section class="video-seccion">
+            <section class="tarjeta-video">
 
                 <h2>Tráiler de Monster Hunter Stories 3</h2>
 
@@ -149,7 +146,7 @@
 
             </section>
 
-            <section class="video-seccion">
+            <section class="tarjeta-video">
 
                 <h2>Tráiler oficial de Pragmata</h2>
 
@@ -169,7 +166,7 @@
 
             </section>
 
-            <section class="video-seccion">
+            <section class="tarjeta-video">
 
                 <h2>Tráiler de Onimusha: Way of the Sword</h2>
 
@@ -188,7 +185,7 @@
 
             </section>
 
-            <section class="video-seccion">
+            <section class="tarjeta-video">
 
                 <h2>Tráiler de Resident Evil Veronica</h2>
 
@@ -214,7 +211,7 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="main-footer">
+    <footer class="pie-pagina">
         <p>© 2026 CAPCOM: más de 40 años haciendo historia.</p>
         <p>Sitio web académico realizado para Programación Web.</p>
         <a href="mailto:arieldavidmarin739@gmail.com">Contacto</a>
